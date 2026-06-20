@@ -1,4 +1,4 @@
-const PLAYERS = ["Suyash", "Sid", "Ram", "Nikhil", "Ammu", "Srirup", "Venky", "Srikanth"];
+const PLAYERS = ["Suyash", "Sid", "Ram", "Nikhil", "Ammu", "Srirup", "Venky", "Srikanth", "Vicky"];
 const staged = [];
 
 function buildDropdowns() {

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Purpose
 
-A GitHub Pages static site for tracking ELO ratings in a casual 8-player badminton group ("Vision Badminton"). After each weekly matchday, the owner logs results via `matchday.html` opened locally in a browser, copies the generated JSON, and manually appends it to `data/matches.json` on GitHub. The leaderboard on `index.html` recalculates from scratch on every page load.
+A GitHub Pages static site for tracking ELO ratings in a casual badminton group. After each weekly matchday, the owner logs results via `matchday.html` opened locally in a browser, copies the generated JSON, and manually appends it to `data/matches.json` on GitHub. The leaderboard on `index.html` recalculates from scratch on every page load.
 
 No build step. No backend. No npm. Push to `main` = deploy.
 
@@ -24,7 +24,7 @@ python3 -m http.server 8080
 index.html        # Leaderboard — fetches data, runs ELO, renders rankings
 matchday.html     # Form to stage new match results and generate JSON for manual copy-paste
 data/
-  players.json    # ["Suyash", "Sid", ...] — the fixed 8-player roster
+  players.json    # player name list — the fixed roster
   matches.json    # Flat chronological array of all matches (all sessions)
 js/
   elo.js          # computeElo(players, matches) → ranked array; no DOM, no imports

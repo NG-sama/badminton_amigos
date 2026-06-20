@@ -1,10 +1,10 @@
-# 🏸 Vision Badminton ELO Tracker
+# Badminton ELO Tracker
 
-Weekly ELO leaderboard for the Vision Badminton gang.
+Weekly ELO leaderboard for a casual badminton group.
 
 ## Live Site
 
-> `https://ng-sama.github.io/vision_badminton/`
+The site is hosted on GitHub Pages (see repo Settings → Pages for the URL).
 
 ## How It Works
 
@@ -26,7 +26,3 @@ Weekly ELO leaderboard for the Vision Badminton gang.
 2. Go to **Settings → Pages**
 3. Source: **Deploy from a branch** → `main` → `/ (root)`
 4. Save — the site will be live in ~1 minute
-
-## Players
-
-Suyash · Sid · Ram · Nikhil · Ammu · Srirup · Venky · Srikanth

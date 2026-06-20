@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Badminton — Log Matchday</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>🏸 Log Matchday</h1>
+  <a href="index.html" class="nav-link">← Leaderboard</a>
+</header>
+
+<div class="section">
+  <p class="section-title">Match Details</p>
+  <div class="form-card">
+
+    <div class="field-group">
+      <label for="date">Date</label>
+      <input type="date" id="date">
+    </div>
+
+    <div class="field-group">
+      <span class="field-label">Match Type</span>
+      <div class="radio-group">
+        <div class="radio-btn">
+          <input type="radio" name="type" id="type-doubles" value="doubles" checked>
+          <label for="type-doubles">Doubles</label>
+        </div>
+        <div class="radio-btn">
+          <input type="radio" name="type" id="type-singles" value="singles">
+          <label for="type-singles">Singles</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="round">Round</label>
+      <input type="text" id="round" placeholder="e.g. R1">
+    </div>
+
+    <div class="field-group">
+      <span class="field-label">Court</span>
+      <div class="radio-group">
+        <div class="radio-btn">
+          <input type="radio" name="court" id="court-c1" value="C1" checked>
+          <label for="court-c1">C1</label>
+        </div>
+        <div class="radio-btn">
+          <input type="radio" name="court" id="court-c2" value="C2">
+          <label for="court-c2">C2</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <span class="field-label" id="label-team-a">Team A</span>
+      <div class="players-row">
+        <select id="a1" class="player-select"></select>
+        <select id="a2" class="player-select partner-field"></select>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <span class="field-label" id="label-team-b">Team B</span>
+      <div class="players-row">
+        <select id="b1" class="player-select"></select>
+        <select id="b2" class="player-select partner-field"></select>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="score">Score</label>
+      <input type="text" id="score" placeholder="e.g. 21-15">
+    </div>
+
+    <div class="field-group">
+      <span class="field-label">Result</span>
+      <div class="radio-group">
+        <div class="radio-btn">
+          <input type="radio" name="result" id="result-team1" value="team1" checked>
+          <label for="result-team1">Team A Won</label>
+        </div>
+        <div class="radio-btn">
+          <input type="radio" name="result" id="result-draw" value="draw">
+          <label for="result-draw">Draw</label>
+        </div>
+        <div class="radio-btn">
+          <input type="radio" name="result" id="result-team2" value="team2">
+          <label for="result-team2">Team B Won</label>
+        </div>
+      </div>
+    </div>
+
+    <button id="add-btn" class="btn btn-primary">Add Match</button>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-title">Staged Matches</p>
+  <div id="staged-list"></div>
+  <button id="generate-btn" class="btn btn-secondary" style="margin-top:0.75rem;width:100%">
+    Generate JSON
+  </button>
+</div>
+
+<div class="section" id="json-section" hidden>
+  <p class="section-title">Copy &amp; paste into matches.json</p>
+  <p style="font-size:0.8rem;color:var(--subtext);margin-bottom:0.5rem">
+    Append these entries to the array in <code>data/matches.json</code>, then commit &amp; push.
+  </p>
+  <textarea id="json-output" readonly></textarea>
+  <div class="json-actions">
+    <button id="copy-btn" class="btn btn-copy">Copy</button>
+  </div>
+</div>
+
+<script src="js/matchday.js"></script>
+</body>
+</html>

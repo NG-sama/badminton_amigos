@@ -4,7 +4,7 @@ Weekly ELO leaderboard for the Vision Badminton gang.
 
 ## Live Site
 
-> `https://<your-username>.github.io/<repo-name>/`
+> `https://ng-sama.github.io/vision_badminton/`
 
 ## How It Works
 
